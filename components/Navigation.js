@@ -56,8 +56,8 @@ const Navigation = () => {
         <div
           className={`${
             toggled === true
-              ? "navigation relative animate__animated animate__fadeInLeft overflow-hidden"
-              : "navigation relative navigation-close overflow-hidden"
+              ? "navigation relative h-screen"
+              : "navigation relative navigation-close "
           }`}
         >
           <Image
