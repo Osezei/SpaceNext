@@ -109,12 +109,13 @@ ul {
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(40.7742px);
   width: 254px;
+  min-height: 100vh;
   z-index: 1;
-  transform: translateX(0%);
-  transition: transform 0.5s ease-in-out;
 }
 .navigation-close {
   display: none;
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-in-out;
+}
+body {
+  overflow: hidden;
+  background-color: rebeccapurple;
 }

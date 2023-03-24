@@ -11,7 +11,7 @@ import Burger from "@/assets/shared/icon-hamburger.svg";
 import CloseBtn from "@/assets/shared/icon-close.svg";
 
 const Navigation = () => {
-  const [toggled, setToggled] = useState(false);
+  const [toggled, setToggled] = useState(true);
   return (
     <Nav className="text-white">
       <div className="text-white hidden md:flex items-center w-[1385px] h-[96px]">
@@ -43,7 +43,7 @@ const Navigation = () => {
       </div>
 
       {/* mobile view */}
-      <div className="flex mx-[24px] pt-[24px] justify-between md:hidden items-center">
+      <div className="flex mx-[24px] pt-[24px] justify-between md:hidden items-center overflow-hidden">
         <Image src={Logo} alt="logo" className="w-[40px] h-[40px]" />
         <Image
           src={Burger}
@@ -56,8 +56,8 @@ const Navigation = () => {
         <div
           className={`${
             toggled === true
-              ? "navigation relative h-screen animate__animated animate__fadeInRight"
-              : "navigation relative navigation-close"
+              ? "navigation relative animate__animated animate__fadeInLeft overflow-hidden"
+              : "navigation relative navigation-close overflow-hidden"
           }`}
         >
           <Image
