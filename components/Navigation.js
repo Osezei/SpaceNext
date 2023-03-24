@@ -12,16 +12,16 @@ import CloseBtn from "@/assets/shared/icon-close.svg";
 
 const Navigation = () => {
   const [toggled, setToggled] = useState(false);
-
   return (
-    <Nav classname="text-white">
+    <Nav className="text-white">
       <div className="text-white hidden md:flex items-center w-[1385px] h-[96px]">
         <Image
           src={Logo}
           alt="logo"
-          className="w-48px h-48px bg-[#fff] rounded-full absolute left-[55px] top-[64px]"
+          className="w-48px h-48px bg-white rounded-full absolute left-[55px] top-[64px]"
+          placeholder=""
         />
-        <div className="hidden lg:block w-[473px] h-[1px] opacity-[25%] bg-[#fff] absolute left-[167px] top-[88px]"></div>
+        <div className="hidden lg:block w-[473px] h-[1px] opacity-[25%] bg-white absolute left-[167px] top-[88px]"></div>
         <ul className="flex heading-one uppercase justify-center w-[450px] lg:w-[830px] h-[96px] nav-bg items-center absolute top-[40px] right-[0px]">
           {links.map((link) => {
             const { id, titleNumber, title, url } = link;
@@ -56,7 +56,7 @@ const Navigation = () => {
         <div
           className={`${
             toggled === true
-              ? "navigation relative h-screen "
+              ? "navigation relative h-screen animate__animated animate__fadeInRight"
               : "navigation relative navigation-close"
           }`}
         >
@@ -64,6 +64,7 @@ const Navigation = () => {
             src={CloseBtn}
             alt="close-btn"
             className="w-[19.09px] h-[19.09px] cursor-pointer absolute top-[33.95px] right-[26.45px]"
+            placeholder=""
             onClick={() => setToggled(false)}
           />
           <ul className="absolute top-[118px] left-[32px]">
