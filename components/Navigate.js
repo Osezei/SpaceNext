@@ -5,20 +5,20 @@ import { links } from "@/utils/url";
 import styled from "styled-components";
 
 //page images
-import Logo from "@/assets/shared/logo.svg";
+import logo from "@/assets/shared/logo.svg";
 
 const Navigate = () => {
   return (
     <Section className="home text-white ">
       <div className="pl-[55px] pt-[40px] flex justify-between items-center">
-        <Image src={Logo} alt="logo" width={48} height={48} placeholder="" />
+        <Image src={logo} alt="logo" width={48} height={48} placeholder="" />
         <div className="hidden lg:block h-[1px] w-[473px] opacity-[25%] bg-white ml-[64px]"></div>
-        <div className="w-[830px] h-[96px] nav-bg backdrop-opacity-5 backdrop-invert bg-white/40 ">
-          <ul className="w-[542px] h-[19px] flex ml-[123px] mt-[39px] place-content-between ">
+        <div className="w-[830px] h-[96px] nav-bg flex items-center">
+          <ul className="w-[542px] h-[19px] ml-[123px] flex justify-between ">
             {links.map((link) => {
               const { id, titleNumber, title, url } = link;
               return (
-                <li key={id} className="flex">
+                <li key={id} className="flex items-center">
                   <Link
                     href={url}
                     className="title text-[16px] tracking-widest uppercase heading-one font-light"
