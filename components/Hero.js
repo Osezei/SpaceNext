@@ -15,7 +15,7 @@ const Hero = () => {
           experience!
         </p>
       </div>
-      <div className="mx-auto lg:mx-0 banner w-[450px] h-[450px] rounded-full flex justify-center items-center mt-[81px] md:mt-[156px] lg:mt-0">
+      <div className="mx-auto lg:mx-0 w-auto h-auto banner md:w-[450px] md:h-[450px] rounded-full flex justify-center items-center mt-[81px] md:mt-[156px] lg:mt-0">
         <div className=" bg-white w-[242px] lg:w-[274px] flex justify-center items-center h-[242px] lg:h-[274px] rounded-full ease-in-out duration-300">
           <p className="heading-one text-[32px] tracking-wider text-[#0b0d17]">
             EXPLORE
