@@ -3,22 +3,24 @@ import Image from "next/image";
 //import styled from "styled-components";
 import { links } from "@/utils/url";
 import { useState } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-import "animate.css";
+// import "animate.css";
 import Logo from "@/assets/shared/logo.svg";
-import Burger from "@/assets/shared/icon-hamburger.svg";
-import CloseBtn from "@/assets/shared/icon-close.svg";
+// import Burger from "@/assets/shared/icon-hamburger.svg";
+// import CloseBtn from "@/assets/shared/icon-close.svg";
 
 const Navigation = () => {
-  const [toggled, setToggled] = useState(true);
+  //const [toggled, setToggled] = useState(false);
   return (
     <Nav className="text-white">
       <div className="text-white hidden md:flex items-center w-[1385px] h-[96px]">
         <Image
           src={Logo}
           alt="logo"
-          className="w-48px h-48px bg-white rounded-full absolute left-[55px] top-[64px]"
+          width={48}
+          height={48}
+          className=" bg-white rounded-full absolute left-[55px] top-[64px]"
           placeholder=""
         />
         <div className="hidden lg:block w-[473px] h-[1px] opacity-[25%] bg-white absolute left-[167px] top-[88px]"></div>
@@ -43,7 +45,7 @@ const Navigation = () => {
       </div>
 
       {/* mobile view */}
-      <div className="flex mx-[24px] pt-[24px] justify-between md:hidden items-center overflow-hidden">
+      <div className="flex mx-[24px] pt-[24px] justify-between md:hidden items-center">
         <Image src={Logo} alt="logo" className="w-[40px] h-[40px]" />
         <Image
           src={Burger}
