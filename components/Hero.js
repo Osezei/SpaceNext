@@ -1,12 +1,14 @@
 const Hero = () => {
   return (
     <section className="block lg:flex  lg:justify-between mt-[112px] text-center lg:text-justify lg:ml-[165px] md:mt-[202px] lg:mt-[251px]">
-      <div className="w-[450px] h-[276px] md:h-[334px] lg:h-[382px] mx-auto lg:mr-[382px] ">
+      <div className="w-[327px] md:w-[450px] h-[276px] md:h-[334px] lg:h-[382px] mx-auto lg:mr-[382px] ">
         <h3 className="heading-two text-[20px] lg:text-[28px] text-[#D0D6F9]">
           So, you want to travel to
         </h3>
-        <h1 className="heading-one text-[150px] text-white ">SPACE</h1>
-        <p className="text-[#D0D6F9] text-[16px] lg:text-[18px] heading-two">
+        <h1 className="heading-one text-[80px] md:text-[150px] text-white ">
+          SPACE
+        </h1>
+        <p className="text-[#D0D6F9] text-[15px] md:text-[16px] lg:text-[18px] heading-two">
           Let’s face it; if you want to go to space, you might as well genuinely
           go to outer space and not hover kind of on the edge of it. Well sit
           back, and relax because we’ll give you a truly out of this world
