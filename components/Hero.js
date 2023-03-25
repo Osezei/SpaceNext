@@ -1,24 +1,20 @@
-import React from "react";
-import styled from "styled-components";
-
 const Hero = () => {
   return (
-    <Section>
-      <div className="flex ml-[165px] mt-[251px]"></div>
-      <div className="w-[450px] h-[382px] mr-[382px]">
-        <h3 className="heading-one2 text-[28px] text-[#D0D6F9]">
+    <section className="block lg:flex  lg:justify-between mt-[112px] text-center lg:text-justify lg:ml-[165px] md:mt-[202px] lg:mt-[251px]">
+      <div className="w-[450px] h-[276px] md:h-[334px] lg:h-[382px] mx-auto lg:mr-[382px] ">
+        <h3 className="heading-two text-[20px] lg:text-[28px] text-[#D0D6F9]">
           So, you want to travel to
         </h3>
         <h1 className="heading-one text-[150px] text-white ">SPACE</h1>
-        <p className="text-[#D0D6F9] text-[18px] heading-one2">
+        <p className="text-[#D0D6F9] text-[16px] lg:text-[18px] heading-two">
           Let’s face it; if you want to go to space, you might as well genuinely
           go to outer space and not hover kind of on the edge of it. Well sit
           back, and relax because we’ll give you a truly out of this world
           experience!
         </p>
       </div>
-      <div className="banner w-[450px] h-[450px] rounded-full flex justify-center items-center">
-        <div className=" bg-white w-[274px] flex justify-center items-center h-[274px] rounded-full ease-in-out duration-300">
+      <div className="mx-auto lg:mx-0 banner w-[450px] h-[450px] rounded-full flex justify-center items-center mt-[81px] md:mt-[156px] lg:mt-0">
+        <div className=" bg-white w-[242px] lg:w-[274px] flex justify-center items-center h-[242px] lg:h-[274px] rounded-full ease-in-out duration-300">
           <p className="heading-one text-[32px] tracking-wider text-[#0b0d17]">
             EXPLORE
           </p>
@@ -29,17 +25,8 @@ const Hero = () => {
           EXPLORE
         </p>
       </div> */}
-    </Section>
+    </section>
   );
 };
 
 export default Hero;
-
-const Section = styled.div`
-  .banner {
-    transition: 0.3s;
-  }
-  .banner:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-`;

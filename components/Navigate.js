@@ -8,12 +8,13 @@ import styled from "styled-components";
 import logo from "@/assets/shared/logo.svg";
 import burger from "@/assets/shared/icon-hamburger.svg";
 import closeBtn from "@/assets/shared/icon-close.svg";
+import { Container } from "postcss";
 
 const Navigate = () => {
   const [toggled, setToggled] = useState(false);
 
   return (
-    <Section className="home text-white ">
+    <section className="home text-white">
       <div className="hidden md:flex pl-[55px] pt-[40px]  justify-between items-center">
         <Image src={logo} alt="logo" width={48} height={48} placeholder="" />
         <div className="hidden lg:block h-[1px] w-[473px] opacity-[25%] bg-white ml-[64px]"></div>
@@ -88,34 +89,8 @@ const Navigate = () => {
           </ul>
         </div>
       </div>
-    </Section>
+    </section>
   );
 };
 
 export default Navigate;
-
-const Section = styled.div`
-  .nav-bg {
-    background-color: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(40.7742px);
-    -webkit-backdrop-filter: blur(40.7742px);
-  }
-  .title {
-    position: relative;
-  }
-  .title::after {
-    content: " ";
-    position: absolute;
-    bottom: -35px;
-    left: 0;
-    display: block;
-    height: 3px;
-    width: 0%;
-    background: #fff;
-    transition: 0.3s;
-  }
-  .title:hover::after {
-    width: 100%;
-    left: 0;
-  }
-`;
