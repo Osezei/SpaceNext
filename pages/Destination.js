@@ -9,8 +9,8 @@ const Destination = () => {
     <section className="destination page-height text-white">
       <Navigate />
 
-      <div className="items-center mt-[24px]">
-        <h3 className="md:text-lg text-base font-normal heading-two uppercase text-center">
+      <div className="items-center mt-[24px] md:mt-[40px]">
+        <h3 className="md:text-[20px] text-base font-normal heading-two uppercase text-center md:text-left pl-[42px]">
           <span className=" text-[#d0d6f976] font-bold opacity-25 pr-[18px]">
             01
           </span>{" "}
