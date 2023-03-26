@@ -14,7 +14,7 @@ const Navigate = () => {
   const [toggled, setToggled] = useState(false);
 
   return (
-    <section className="home text-white">
+    <section className=" text-white">
       <div className="hidden md:flex pl-[55px] pt-[40px]  justify-between items-center">
         <Image src={logo} alt="logo" width={48} height={48} placeholder="" />
         <div className="hidden lg:block h-[1px] w-[473px] opacity-[25%] bg-white ml-[64px]"></div>

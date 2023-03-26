@@ -151,3 +151,41 @@ ul {
   overflow: hidden;
   background-color: rebeccapurple;
 } */
+
+/* destination page */
+.title-destination {
+  position: relative;
+}
+
+.title-destination::after {
+  content: " ";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  display: block;
+  height: 3px;
+  width: 0;
+  background: #d0d6f976;
+  transition: 0.3s;
+}
+.title-destination:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.title-fixed {
+  position: relative;
+}
+
+.title-fixed::after {
+  content: " ";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  transition: 0.3s;
+}
+/* end page destination */
