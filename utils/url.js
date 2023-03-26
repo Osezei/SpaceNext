@@ -9,18 +9,18 @@ export const links = [
     id: 2,
     titleNumber: "01",
     title: "destination",
-    url: "/destination",
+    url: "/Destination",
   },
   {
     id: 3,
     titleNumber: "02",
     title: "crew",
-    url: "/crew",
+    url: "/Crew",
   },
   {
     id: 4,
     titleNumber: "03",
     title: "technology",
-    url: "/technology",
+    url: "/Technology",
   },
 ];
