@@ -71,11 +71,11 @@ const Navigate = () => {
             {links.map((link) => {
               const { id, titleNumber, title, url } = link;
               return (
-                <li key={id} className="pt-[32px]">
+                <li key={id} className="pt-[32px] ">
                   {toggled === true ? (
                     <Link
                       href={url}
-                      className="text-[16px] tracking-widest heading-one"
+                      className="text-[16px] tracking-widest heading-one uppercase"
                     >
                       <span className="pr-[12px] tracking-widest heading-two font-bold">
                         {titleNumber}
