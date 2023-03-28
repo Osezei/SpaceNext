@@ -17,20 +17,53 @@ const Crew = () => {
         </h3>
       </div>
 
-      <div className="lg:ml-[166px] ">
+      <div className="">
+        {crewInfo.map(({ id, image, name }) => {
+          return (
+            <article key={id}>
+              {toggled === id ? (
+                <div className="mt-[32px] w-[327px] h-[223px] mx-auto md:hidden">
+                  <Image
+                    src={image}
+                    width={368}
+                    height={540}
+                    alt={name}
+                    className=" md:mt-28"
+                  />
+                  <div className="h-[1px] w-[327px] bg-[#383B4B]"></div>
+                </div>
+              ) : null}
+            </article>
+          );
+        })}
+        <div className="absolute top-[610px] w-full text-center md:hidden">
+          {crewInfo.map(({ id }) => {
+            return (
+              <div
+                key={id}
+                onClick={() => setToggled(id)}
+                className={`${
+                  toggled === id
+                    ? "dot dot-active mr-4 cursor-pointer"
+                    : "dot mr-4 cursor-pointer"
+                }`}
+              ></div>
+            );
+          })}
+        </div>
         {crewInfo.map(({ id, name, position, image, note }) => {
           return (
-            <article key={id} className="mt-[60px] lg:mt-[0]">
+            <article key={id} className="mt-[274px] md:mt-[60px] lg:mt-[0]">
               {toggled === id ? (
                 <div className="block text-center lg:text-left lg:flex lg:justify-between items-center">
                   <div className="">
-                    <h2 className="heading-one text-white/50 text-[24px] lg:text-[32px] uppercase tracking-wider">
+                    <h2 className="heading-one text-white/50 text-[16px] md:text-[24px] lg:text-[32px] uppercase tracking-wider">
                       {position}
                     </h2>
-                    <h5 className="heading-one text-[40px] lg:text-[56px] uppercase tracking-wider ">
+                    <h5 className="heading-one text-2xl md:text-[40px] lg:text-[56px] uppercase tracking-wider ">
                       {name}
                     </h5>
-                    <p className="w-[444px] mt-[16px] lg:mt-0 md:w-[520px] mx-auto lg:mx-0 text-16px lg:text-[18px] text-[#D0D6F9]">
+                    <p className="w-[327px] md:w-[444px] mt-[16px] lg:mt-0 lg:w-[520px] mx-auto lg:mx-0 text-15px md:text-16px lg:text-[18px] text-[#D0D6F9]">
                       {note}
                     </p>
                   </div>
@@ -49,8 +82,8 @@ const Crew = () => {
           );
         })}
       </div>
-      <div className="absolute w-full text-center top-[480px] lg:left-[167px] lg:top-[750px] lg:text-left">
-        {crewInfo.map(({ id, name, image }) => {
+      <div className="hidden md:inline-block absolute w-full text-center top-[480px] lg:left-[167px] lg:top-[750px] lg:text-left">
+        {crewInfo.map(({ id }) => {
           return (
             <div
               key={id}
@@ -66,9 +99,9 @@ const Crew = () => {
       </div>
       {crewInfo.map(({ id, image, name }) => {
         return (
-          <article key={id}>
+          <article key={id} className="">
             {toggled === id ? (
-              <div className="flex justify-center">
+              <div className="hidden md:flex justify-center lg:hidden">
                 <Image
                   src={image}
                   width={368}
