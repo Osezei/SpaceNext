@@ -201,3 +201,10 @@ ul {
 .dot-active {
   background-color: #fff;
 }
+
+.image-container {
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+  margin-right: 24px;
+}

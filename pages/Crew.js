@@ -20,9 +20,9 @@ const Crew = () => {
       <div className="">
         {crewInfo.map(({ id, image, name }) => {
           return (
-            <article key={id}>
+            <article key={id} className="">
               {toggled === id ? (
-                <div className="mt-[32px] w-[327px] h-[223px] mx-auto md:hidden">
+                <div className="mt-[32px] w-[327px] h-[223px] mx-auto md:hidden object-contain">
                   <Image
                     src={image}
                     width={368}
@@ -53,27 +53,40 @@ const Crew = () => {
         </div>
         {crewInfo.map(({ id, name, position, image, note }) => {
           return (
-            <article key={id} className="mt-[274px] md:mt-[60px] lg:mt-[0]">
+            <article
+              key={id}
+              className="mt-[274px] lg:ml-[167px] md:mt-[60px] lg:mt-[0]"
+            >
               {toggled === id ? (
                 <div className="block text-center lg:text-left lg:flex lg:justify-between items-center">
                   <div className="">
                     <h2 className="heading-one text-white/50 text-[16px] md:text-[24px] lg:text-[32px] uppercase tracking-wider">
                       {position}
                     </h2>
-                    <h5 className="heading-one text-2xl md:text-[40px] lg:text-[56px] uppercase tracking-wider ">
+                    <h5 className="heading-one text-2xl md:text-[40px] lg:text-[56px] lg:my-9 uppercase tracking-wider ">
                       {name}
                     </h5>
-                    <p className="w-[327px] md:w-[444px] mt-[16px] lg:mt-0 lg:w-[520px] mx-auto lg:mx-0 text-15px md:text-16px lg:text-[18px] text-[#D0D6F9]">
+                    <p className="w-[327px] md:w-[444px] mt-[16px] lg:mt-2 lg:w-[520px] mx-auto lg:mx-0 text-15px md:text-16px lg:text-[18px] text-[#D0D6F9]">
                       {note}
                     </p>
                   </div>
-                  <div className="hidden lg:flex">
+                  {/* <div className="hidden lg:flex">
                     <Image
                       src={image}
                       width={615}
                       height={607}
                       alt={name}
                       className="px-24 py-20"
+                    />
+                  </div> */}
+                  {/* testing */}
+                  <div className="hidden lg:flex image-container">
+                    <Image
+                      src={image}
+                      width={600}
+                      height={600}
+                      alt={name}
+                      className=""
                     />
                   </div>
                 </div>
@@ -82,7 +95,7 @@ const Crew = () => {
           );
         })}
       </div>
-      <div className="hidden md:inline-block absolute w-full text-center top-[480px] lg:left-[167px] lg:top-[750px] lg:text-left">
+      <div className="hidden md:inline-block absolute w-full text-center top-[480px] lg:left-[167px] lg:top-[659px] lg:text-left">
         {crewInfo.map(({ id }) => {
           return (
             <div
@@ -99,15 +112,15 @@ const Crew = () => {
       </div>
       {crewInfo.map(({ id, image, name }) => {
         return (
-          <article key={id} className="">
+          <article key={id} className="mt-28">
             {toggled === id ? (
-              <div className="hidden md:flex justify-center lg:hidden">
+              <div className="hidden md:flex justify-center object-contain w-[500px] h-[500px] lg:hidden mx-auto">
                 <Image
                   src={image}
-                  width={368}
+                  width={408}
                   height={540}
                   alt={name}
-                  className="mt-28"
+                  className=""
                 />
               </div>
             ) : null}
