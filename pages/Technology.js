@@ -17,7 +17,7 @@ const Technology = () => {
         </h3>
       </div>
 
-      <div className="flex justify-between items-center">
+      <div className="hidden lg:flex justify-between items-center">
         <div className="flex items-center gap-20">
           <div className="ml-[160px] h-[303px] w-[80px]">
             {techInfo.map(({ id }) => {
@@ -53,13 +53,6 @@ const Technology = () => {
                           {note}
                         </p>
                       </div>
-                      {/* <Image
-                      src={image}
-                      alt={title}
-                      className="w-[515px] h-[527px] object-contain"
-                      width={515}
-                      height={527}
-                    /> */}
                     </div>
                   ) : null}
                 </article>
@@ -67,7 +60,7 @@ const Technology = () => {
             })}
           </div>
         </div>
-        <div>
+        <div className="hidden lg:flex">
           {techInfo.map(({ id, image, title }) => {
             return (
               <article key={id} className="">
@@ -79,6 +72,61 @@ const Technology = () => {
                     alt={title}
                     className="w-[515px] h-[527px] object-contain"
                   />
+                ) : null}
+              </article>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* tablet and mobile screen */}
+      <div className="mt-8 md:mt-[60px] lg:hidden">
+        <div className="mx-auto">
+          {techMobile.map(({ id, image, title }) => {
+            return (
+              <div key={id} className="">
+                {toggled === id ? (
+                  <Image src={image} alt={title} width={1024} height={310} />
+                ) : null}
+              </div>
+            );
+          })}
+        </div>
+        <div className="flex justify-center mt-8 md:mt-14">
+          {techMobile.map(({ id }) => {
+            return (
+              <button
+                key={id}
+                onClick={() => setToggled(id)}
+                className={`${
+                  toggled === id
+                    ? "mr-4 w-10 md:w-[60px] h-10 md:h-[60px] border-2 rounded-full border-[#d0d6f976] bg-white text-[16px] md:text-2xl text-black text-home ease-in-out"
+                    : "mr-4 w-10 md:w-[60px] h-10 md:h-[60px] border-2 rounded-full border-[#d0d6f976] text-home text-[16px] md:text-2xl ease-in-out"
+                }`}
+              >
+                {id}
+              </button>
+            );
+          })}
+        </div>
+        <div>
+          {techMobile.map(({ id, note, title, titleTop }) => {
+            return (
+              <article key={id} className="text-center">
+                {toggled === id ? (
+                  <div className="mt-[26px] md:mt-11">
+                    <div className=" md:w-[458px] md:h-[237px] mx-auto">
+                      <h2 className="text-[14px] md:text-[16px] text-home text-[#D0D6F9] uppercase">
+                        {titleTop}
+                      </h2>
+                      <h3 className="mt-4 text-2xl md:text-[40px] uppercase text-home">
+                        {title}
+                      </h3>
+                      <p className="px-10 md:px-0 mt-4 text-[15px] md:text-[16px] top-wording text-[#D0D6F9]">
+                        {note}
+                      </p>
+                    </div>
+                  </div>
                 ) : null}
               </article>
             );
