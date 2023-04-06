@@ -22,8 +22,14 @@ const Crew = () => {
           return (
             <article key={id} className="">
               {toggled === id ? (
-                <div className="mt-[30px] w-[327px] h-[223px] mx-auto  md:hidden ">
-                  <Image src={image} alt={name} className="" priority />
+                <div className="mt-[32px] w-[327px] h-[223px] mx-auto md:hidden object-contain">
+                  <Image
+                    src={image}
+                    width={368}
+                    height={540}
+                    alt={name}
+                    className=" md:mt-28"
+                  />
                   <div className="h-[1px] w-[327px] bg-[#383B4B]"></div>
                 </div>
               ) : null}
@@ -49,10 +55,10 @@ const Crew = () => {
           return (
             <article
               key={id}
-              className="mt-[274px] lg:ml-[167px] md:mt-[60px] lg:mt-[0] "
+              className="mt-[274px] lg:ml-[167px] md:mt-[60px] lg:mt-[0]"
             >
               {toggled === id ? (
-                <div className="block text-center lg:text-left lg:flex lg:justify-start lg:gap-28 items-center">
+                <div className="block text-center lg:text-left lg:flex lg:justify-between items-center">
                   <div className="">
                     <h2 className="heading-one text-white/50 text-[16px] md:text-[24px] lg:text-[32px] uppercase tracking-wider">
                       {position}
@@ -64,9 +70,24 @@ const Crew = () => {
                       {note}
                     </p>
                   </div>
-
-                  <div className="hidden lg:block">
-                    <Image src={image} alt={name} className="" priority />
+                  {/* <div className="hidden lg:flex">
+                    <Image
+                      src={image}
+                      width={615}
+                      height={607}
+                      alt={name}
+                      className="px-24 py-20"
+                    />
+                  </div> */}
+                  {/* testing */}
+                  <div className="hidden lg:flex image-container">
+                    <Image
+                      src={image}
+                      width={600}
+                      height={600}
+                      alt={name}
+                      className=""
+                    />
                   </div>
                 </div>
               ) : null}
@@ -74,7 +95,7 @@ const Crew = () => {
           );
         })}
       </div>
-      <div className="hidden md:block w-full text-center absolute top-[480px] lg:left-[167px] lg:top-[706px] lg:text-left">
+      <div className="hidden md:inline-block absolute w-full text-center top-[480px] lg:left-[167px] lg:top-[659px] lg:text-left">
         {crewInfo.map(({ id }) => {
           return (
             <div
@@ -91,13 +112,16 @@ const Crew = () => {
       </div>
       {crewInfo.map(({ id, image, name }) => {
         return (
-          <article
-            key={id}
-            className=" hidden md:flex md:mt-10 justify-center lg:hidden"
-          >
+          <article key={id} className="mt-28">
             {toggled === id ? (
-              <div className="">
-                <Image src={image} alt={name} className="" priority />
+              <div className="hidden md:flex justify-center object-contain w-[500px] h-[500px] lg:hidden mx-auto">
+                <Image
+                  src={image}
+                  width={408}
+                  height={540}
+                  alt={name}
+                  className=""
+                />
               </div>
             ) : null}
           </article>
