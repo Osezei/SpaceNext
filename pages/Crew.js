@@ -56,12 +56,12 @@ const Crew = () => {
               className="mt-[274px] lg:ml-[167px] md:mt-[60px] lg:mt-[0] "
             >
               {toggled === id ? (
-                <div className="hidden md:block text-center lg:text-left lg:flex lg:justify-start lg:gap-28 items-center">
-                  <div className="">
+                <div className="hidden md:block text-center lg:text-left lg:flex lg:justify-start   items-center">
+                  <div className="lg:w-[750px]">
                     <h2 className="heading-one text-white/50 text-[16px] md:text-[24px] lg:text-[32px] uppercase tracking-wider">
                       {position}
                     </h2>
-                    <h5 className="heading-one text-2xl md:text-[40px] lg:text-[56px] lg:my-9 uppercase tracking-wide lg:tracking-wider ">
+                    <h5 className="heading-one text-2xl md:text-[40px] lg:text-[56px] lg:my-9 uppercase tracking-wide lg:tracking-wider leading-10">
                       {name}
                     </h5>
                     <p className="w-[327px] md:w-[444px] mt-[16px] lg:mt-2 lg:w-[520px] mx-auto lg:mx-0 text-15px md:text-16px lg:text-[18px] text-[#D0D6F9]">
@@ -78,7 +78,7 @@ const Crew = () => {
           );
         })}
       </div>
-      <div className="hidden md:block w-full text-center fixed top-[480px] lg:left-[167px] lg:top-[706px] lg:text-left ">
+      <div className="hidden md:block w-full lg:w-[132px] text-center absolute top-[480px] lg:left-[167px] lg:top-[706px] lg:text-left ">
         {crewInfo.map(({ id }) => {
           return (
             <div
