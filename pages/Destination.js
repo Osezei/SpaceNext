@@ -17,13 +17,13 @@ const Destination = () => {
           Pick your destination
         </h3>
 
-        <div className="mt-[32px] lg:mt-[97px]">
+        <div className="lg:flex mt-[64px]">
           {destinationInfo.map(({ id, image, title }) => {
             return (
-              <div key={id} className="flex justify-center lg:justify-start">
+              <div key={id} className="">
                 {toggled === id ? (
                   <div className=" ">
-                    <div className="md:hidden">
+                    <div className="flex justify-center md:hidden">
                       <Image
                         src={image}
                         width={170}
@@ -32,7 +32,7 @@ const Destination = () => {
                         className=""
                       />
                     </div>
-                    <div className="hidden md:flex lg:hidden">
+                    <div className="hidden md:flex justify-center lg:hidden">
                       <Image
                         src={image}
                         width={300}
@@ -41,7 +41,7 @@ const Destination = () => {
                         className=""
                       />
                     </div>
-                    <div className="hidden lg:flex pl-[166px]">
+                    <div className="hidden lg:flex ml-[230px] mr-[157px]">
                       <Image
                         src={image}
                         width={445}
@@ -55,139 +55,76 @@ const Destination = () => {
               </div>
             );
           })}
-        </div>
 
-        <div className="lg:absolute top-[24px] right-[321.5px] w-[237.5px] md:w-[285px] mt-[26px] md:mt-[53px] heading-two h-[28px] mx-auto flex justify-between text-[#D0D6F9] text-sm">
-          {destinationInfo.map(({ id, title }) => {
-            return (
-              <button
-                key={id}
-                onClick={() => setToggled(id)}
-                className={`${
-                  toggled === id
-                    ? " uppercase tracking-widest title-fixed"
-                    : "uppercase tracking-widest title-destination"
-                }`}
-              >
-                {title}
-              </button>
-            );
-          })}
-        </div>
-        <div className="hidden lg:block w-[445px] h-[472px] absolute top-[130px] right-[164px] ">
-          {/* laptop view */}
-          {destinationInfo.map(
-            ({ title, note, id, distance, kilometers, km, time, days }) => {
-              return (
-                <article key={id} className="">
-                  {toggled === id ? (
-                    <div>
-                      <div>
-                        <h6 className="heading-one text-[100px] uppercase">
-                          {title}
-                        </h6>
-                        <p className="text-[#D0D6F9] text-lg">{note}</p>
-                        <div className="bg-[#383B4B] w-[444px] h-[1px] mt-[54px]"></div>
-                      </div>
-                      <div className="flex mt-[28px]">
-                        <div className="mr-[79px]">
-                          <p className="uppercase text-sm heading-two tracking-widest text-[#D0D6F9]">
-                            {distance}
-                          </p>
-                          <h3 className="text-[28px] heading-one tracking-widest">
-                            {kilometers}
-                            <span className="uppercase"> {km}</span>
-                          </h3>
-                        </div>
-                        <div className="">
-                          <p className="uppercase text-sm text-[#D0D6F9] heading-two">
-                            {time}
-                          </p>
-                          <h3 className="text-[28px] uppercase heading-one">
-                            {days}
-                          </h3>
-                        </div>
-                      </div>
-                    </div>
-                  ) : null}
-                </article>
-              );
-            }
-          )}
-        </div>
-        {/* end of laptop view */}
-      </div>
+          {/* information on the site */}
 
-      <div className="lg:hidden">
-        {destinationInfo.map(
-          ({
-            title,
-            note,
-            image,
-            id,
-            distance,
-            kilometers,
-            km,
-            time,
-            days,
-          }) => {
-            return (
-              <article key={id} className="text-center">
-                {toggled === id ? (
-                  <div className="">
-                    <h6 className="text-[56px] md:text-[80px] md:mt-[32px] lg:mt-0 uppercase tracking-widest heading-one flex justify-center">
-                      {title}
-                    </h6>
-                    <p className=" leading-loose heading-two mx-6 text-[#D0D6F9] text-sm md:text-[16px] md:mx-[150px]">
-                      {note}
-                    </p>
-                    <div className="w-[327px] md:w-[573px] h-[1px] bg-[#383B4B] mx-auto my-8 md:mt-[49px] md:mb-[29px]"></div>
-                    {/* mobile view */}
-                    <div className="md:hidden">
-                      <div className="">
-                        <p className="uppercase text-sm heading-two tracking-widest text-[#D0D6F9]">
-                          {distance}
-                        </p>
-                        <h3 className="mt-3 text-2xl heading-one tracking-widest">
-                          {kilometers}
-                          <span className="uppercase"> {km}</span>
-                        </h3>
-                      </div>
-                      <div className="mt-8">
-                        <p className="uppercase text-[#D0D6F9] heading-two">
-                          {time}
-                        </p>
-                        <h3 className="text-[28px] uppercase mt-3 heading-one">
-                          {days}
-                        </h3>
-                      </div>
-                    </div>
-                    {/* tablet view */}
-                    <div className="hidden md:flex justify-center gap-10 text-center">
-                      <div className="">
-                        <p className="uppercase text-sm heading-two tracking-widest text-[#D0D6F9]">
-                          {distance}
-                        </p>
-                        <h3 className="text-[28px] heading-one tracking-widest mt-3 font-normal">
-                          {kilometers}
-                          <span className="uppercase"> {km}</span>
-                        </h3>
-                      </div>
-                      <div className="">
-                        <p className="uppercase text-sm text-[#D0D6F9] heading-two">
-                          {time}
-                        </p>
-                        <h3 className="text-[28px] uppercase heading-one mt-3 font-normal">
-                          {days}
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                ) : null}
-              </article>
-            );
-          }
-        )}
+          <div className=" text-sm">
+            <div className="heading-two flex justify-center mt-[53px] lg:mt-0 lg:justify-start text-[#D0D6F9] text-sm">
+              {destinationInfo.map(({ id, title }) => {
+                return (
+                  <button
+                    key={id}
+                    onClick={() => setToggled(id)}
+                    className={`${
+                      toggled === id
+                        ? " uppercase tracking-widest title-fixed mr-[35px] text-white"
+                        : "uppercase tracking-widest title-destination mr-[35px]"
+                    }`}
+                  >
+                    {title}
+                  </button>
+                );
+              })}
+            </div>
+
+            <div className="pt-[37px]">
+              {/* laptop view */}
+              {destinationInfo.map(
+                ({ title, note, id, distance, kilometers, km, time, days }) => {
+                  return (
+                    <article
+                      key={id}
+                      className="w-[327px] md:w-[573px] lg:w-[445px] mx-auto text-center lg:text-left lg:mx-0 text-white  "
+                    >
+                      {toggled === id ? (
+                        <div>
+                          <div className="">
+                            <h6 className="heading-one text-[56px]  md:text-[92px] lg:text-[100px] uppercase my-[20px] md:my-[37px]">
+                              {title}
+                            </h6>
+                            <p className="text-[#D0D6F9] text-[15px] md:text-lg ">
+                              {note}
+                            </p>
+                            <div className="bg-[#383B4B] w-[327px] md:w-[573px] lg:w-[444px] h-[1px] mt-[32px] md:mt-[54px]"></div>
+                          </div>
+                          <div className="md:flex justify-center mt-[32px] md:mt-[28px] lg:justify-start">
+                            <div className="md:mr-[79px]">
+                              <p className="uppercase text-sm heading-two pb-3 tracking-widest text-[#D0D6F9]">
+                                {distance}
+                              </p>
+                              <h3 className="text-[28px] heading-one tracking-widest mt-3 md:mt-0">
+                                {kilometers}
+                                <span className="uppercase"> {km}</span>
+                              </h3>
+                            </div>
+                            <div className="mt-8 md:mt-0">
+                              <p className="uppercase text-sm text-[#D0D6F9] heading-two pb-3">
+                                {time}
+                              </p>
+                              <h3 className="text-[28px] uppercase heading-one mt-3 md:mt-0">
+                                {days}
+                              </h3>
+                            </div>
+                          </div>
+                        </div>
+                      ) : null}
+                    </article>
+                  );
+                }
+              )}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
