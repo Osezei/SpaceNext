@@ -78,7 +78,7 @@ const Crew = () => {
           );
         })}
       </div>
-      <div className="hidden md:block w-full text-center absolute top-[480px] lg:left-[167px] lg:top-[706px] lg:text-left">
+      <div className="hidden md:block w-full text-center fixed top-[480px] lg:left-[167px] lg:top-[706px] lg:text-left ">
         {crewInfo.map(({ id }) => {
           return (
             <div

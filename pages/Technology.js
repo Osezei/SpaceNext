@@ -18,7 +18,7 @@ const Technology = () => {
       </div>
 
       <div className="hidden lg:flex justify-between items-center">
-        <div className="flex items-center gap-20">
+        <div className="flex items-center gap-20 grow">
           <div className="ml-[160px] h-[303px] w-[80px]">
             {techInfo.map(({ id }) => {
               return (

@@ -74,7 +74,7 @@ const Destination = () => {
             );
           })}
         </div>
-        <div className="hidden lg:block w-[445px] absolute top-[130px] right-[164px] ">
+        <div className="hidden lg:block w-[445px] h-[472px] absolute top-[130px] right-[164px] ">
           {/* laptop view */}
           {destinationInfo.map(
             ({ title, note, id, distance, kilometers, km, time, days }) => {

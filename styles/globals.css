@@ -147,10 +147,6 @@ ul {
 .navigation-close {
   display: none;
 }
-/* body {
-  overflow: hidden;
-  background-color: rebeccapurple;
-} */
 
 /* destination page */
 .title-destination {
@@ -207,4 +203,7 @@ ul {
   height: 500px;
   object-fit: contain;
   margin-right: 24px;
+}
+body {
+  background-color: #19191a;
 }
