@@ -41,7 +41,7 @@ const Destination = () => {
                         className=""
                       />
                     </div>
-                    <div className="hidden lg:flex pl-[166px] ">
+                    <div className="hidden lg:flex pl-[166px]">
                       <Image
                         src={image}
                         width={445}
@@ -57,31 +57,29 @@ const Destination = () => {
           })}
         </div>
 
-        <div className="lg:absolute top-[24px] left-[832px] w-[237.5px] md:w-[285px] mt-[26px] md:mt-[53px] heading-two h-[28px] mx-auto flex justify-between text-[#D0D6F9] text-sm">
+        <div className="lg:absolute top-[24px] right-[321.5px] w-[237.5px] md:w-[285px] mt-[26px] md:mt-[53px] heading-two h-[28px] mx-auto flex justify-between text-[#D0D6F9] text-sm">
           {destinationInfo.map(({ id, title }) => {
             return (
-              <>
-                <button
-                  key={id}
-                  onClick={() => setToggled(id)}
-                  className={`${
-                    toggled === id
-                      ? " uppercase tracking-widest title-fixed"
-                      : "uppercase tracking-widest title-destination"
-                  }`}
-                >
-                  {title}
-                </button>
-              </>
+              <button
+                key={id}
+                onClick={() => setToggled(id)}
+                className={`${
+                  toggled === id
+                    ? " uppercase tracking-widest title-fixed"
+                    : "uppercase tracking-widest title-destination"
+                }`}
+              >
+                {title}
+              </button>
             );
           })}
         </div>
-        <div className="hidden lg:block w-[445px] absolute top-[130px] left-[832px] ">
+        <div className="hidden lg:block w-[445px] absolute top-[130px] right-[164px] ">
           {/* laptop view */}
           {destinationInfo.map(
             ({ title, note, id, distance, kilometers, km, time, days }) => {
               return (
-                <article key={id}>
+                <article key={id} className="">
                   {toggled === id ? (
                     <div>
                       <div>
@@ -182,39 +180,6 @@ const Destination = () => {
                         <h3 className="text-[28px] uppercase heading-one mt-3 font-normal">
                           {days}
                         </h3>
-                      </div>
-                    </div>
-                  </div>
-                ) : null}
-
-                {/* another screen */}
-                {toggled === id ? (
-                  <div className="hidden">
-                    <div className="">
-                      <Image
-                        src={image}
-                        alt={title}
-                        width={48}
-                        height={48}
-                        className=""
-                      />
-                    </div>
-                    <div className="">
-                      <h6 className="">{title}</h6>
-                      <p className="top-wording leading-loose">{note}</p>
-                      <div className="bg-[#d0d6f976]"></div>
-                      <div className="">
-                        <div>
-                          <p className="uppercase">{distance}</p>
-                          <h3 className=" ">
-                            {kilometers}
-                            <span className=""> {km}</span>
-                          </h3>
-                        </div>
-                        <div className="">
-                          <p className="">{time}</p>
-                          <h3 className="">{days}</h3>
-                        </div>
                       </div>
                     </div>
                   </div>
