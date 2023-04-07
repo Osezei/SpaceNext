@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
-    <section className="block lg:flex  lg:justify-between mt-[112px] text-center lg:text-justify lg:ml-[165px] md:mt-[202px] lg:mt-[251px]">
-      <div className="w-[327px] md:w-[450px] h-[276px] md:h-[334px] lg:h-[382px] mx-auto lg:mr-[382px]">
+    <section className="block lg:flex  lg:justify-between mt-[112px] text-center lg:text-left lg:ml-[165px] md:mt-[202px] lg:mt-[251px] ">
+      <div className="w-[327px] md:w-[450px] h-[276px] md:h-[334px] lg:h-[382px] lg:w-[454px] mx-auto lg:mx-0">
         <h3 className="heading-two text-[20px] lg:text-[28px] text-[#D0D6F9]">
           So, you want to travel to
         </h3>
