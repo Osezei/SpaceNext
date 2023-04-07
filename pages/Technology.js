@@ -42,7 +42,7 @@ const Technology = () => {
                 <article key={id} className="">
                   {toggled === id ? (
                     <div className="">
-                      <div className="w-[444px] h-[303px] my-auto">
+                      <div className="w-[470px] h-[303px] my-auto">
                         <h2 className="text-[16px] text-home text-[#D0D6F9] uppercase">
                           {titleTop}
                         </h2>
@@ -67,8 +67,7 @@ const Technology = () => {
                 {toggled === id ? (
                   <Image
                     src={image}
-                    width={515}
-                    height={527}
+                    priority
                     alt={title}
                     className="w-[515px] h-[527px] object-contain"
                   />

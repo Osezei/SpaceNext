@@ -22,7 +22,7 @@ const Crew = () => {
           return (
             <article key={id} className="">
               {toggled === id ? (
-                <div className="mt-[30px] w-[327px] h-[223px] mx-auto  md:hidden ">
+                <div className="mt-[30px] w-[327px] mx-auto  md:hidden ">
                   <Image src={image} alt={name} className="" priority />
                   <div className="h-[1px] w-[327px] bg-[#383B4B]"></div>
                 </div>
@@ -30,8 +30,8 @@ const Crew = () => {
             </article>
           );
         })}
-        <div className="absolute top-[610px] w-full text-center md:hidden">
-          {crewInfo.map(({ id }) => {
+        <div className="mt-[610px} w-full text-center md:hidden">
+          {crewInfo.map(({ id, note }) => {
             return (
               <div
                 key={id}
@@ -41,7 +41,11 @@ const Crew = () => {
                     ? "dot dot-active mr-4 cursor-pointer"
                     : "dot mr-4 cursor-pointer"
                 }`}
-              ></div>
+              >
+                <article key={id}>
+                  {toggled === id ? <div>{note}</div> : null}
+                </article>
+              </div>
             );
           })}
         </div>
@@ -52,12 +56,12 @@ const Crew = () => {
               className="mt-[274px] lg:ml-[167px] md:mt-[60px] lg:mt-[0] "
             >
               {toggled === id ? (
-                <div className="block text-center lg:text-left lg:flex lg:justify-start lg:gap-28 items-center">
+                <div className="hidden md:block text-center lg:text-left lg:flex lg:justify-start lg:gap-28 items-center">
                   <div className="">
                     <h2 className="heading-one text-white/50 text-[16px] md:text-[24px] lg:text-[32px] uppercase tracking-wider">
                       {position}
                     </h2>
-                    <h5 className="heading-one text-2xl md:text-[40px] lg:text-[56px] lg:my-9 uppercase tracking-wider ">
+                    <h5 className="heading-one text-2xl md:text-[40px] lg:text-[56px] lg:my-9 uppercase tracking-wide lg:tracking-wider ">
                       {name}
                     </h5>
                     <p className="w-[327px] md:w-[444px] mt-[16px] lg:mt-2 lg:w-[520px] mx-auto lg:mx-0 text-15px md:text-16px lg:text-[18px] text-[#D0D6F9]">

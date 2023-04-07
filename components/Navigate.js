@@ -55,7 +55,7 @@ const Navigate = () => {
           className={`${
             toggled === true
               ? "navigation relative h-screen"
-              : "navigation relative navigation-close "
+              : "navigation relative navigation-close"
           }`}
         >
           <Image
