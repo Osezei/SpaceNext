@@ -60,7 +60,7 @@ const Technology = () => {
             })}
           </div>
         </div>
-        <div className="hidden lg:flex">
+        <div className="hidden lg:flex ml-[156px] ">
           {techInfo.map(({ id, image, title }) => {
             return (
               <article key={id} className="">
@@ -69,7 +69,7 @@ const Technology = () => {
                     src={image}
                     priority
                     alt={title}
-                    className="w-[515px] h-[527px] object-contain ml-[156px]"
+                    className="w-[515px] h-[527px] object-contain "
                   />
                 ) : null}
               </article>
