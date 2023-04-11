@@ -49,7 +49,7 @@ const Technology = () => {
                         <h3 className="text-[50px] uppercase text-home">
                           {title}
                         </h3>
-                        <p className="text-[18px] top-wording pt-[20px] text-[#D0D6F9]">
+                        <p className="text-[18px] top-wording pt-[20px] text-[#D0D6F9] lg:w-[444px]">
                           {note}
                         </p>
                       </div>
@@ -69,7 +69,7 @@ const Technology = () => {
                     src={image}
                     priority
                     alt={title}
-                    className="w-[515px] h-[527px] object-contain"
+                    className="w-[515px] h-[527px] object-contain ml-[156px]"
                   />
                 ) : null}
               </article>

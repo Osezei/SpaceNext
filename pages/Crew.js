@@ -69,7 +69,7 @@ const Crew = () => {
                     </p>
                   </div>
 
-                  <div className="hidden lg:block">
+                  <div className="hidden lg:block mr-[89px]">
                     <Image src={image} alt={name} className="" priority />
                   </div>
                 </div>

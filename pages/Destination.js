@@ -84,7 +84,7 @@ const Destination = () => {
                   return (
                     <article
                       key={id}
-                      className="w-[327px] md:w-[573px] lg:w-[445px] mx-auto text-center lg:text-left lg:mx-0 text-white  "
+                      className="w-[327px] md:w-[573px] lg:w-[445px] mx-auto text-center lg:text-left lg:mr-[163px] text-white  "
                     >
                       {toggled === id ? (
                         <div>
