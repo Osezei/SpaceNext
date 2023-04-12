@@ -30,7 +30,7 @@ const Crew = () => {
             </article>
           );
         })}
-        <div className="mt-[610px} w-full text-center md:hidden">
+        <div className="my-8 text-center md:hidden">
           {crewInfo.map(({ id, note }) => {
             return (
               <div
@@ -41,11 +41,26 @@ const Crew = () => {
                     ? "dot dot-active mr-4 cursor-pointer"
                     : "dot mr-4 cursor-pointer"
                 }`}
-              >
-                <article key={id}>
-                  {toggled === id ? <div>{note}</div> : null}
-                </article>
-              </div>
+              ></div>
+            );
+          })}
+        </div>
+        <div className="md:hidden">
+          {crewInfo.map(({ id, note, position, name }) => {
+            return (
+              <article key={id} className="w-[327px] mx-auto text-center ">
+                {toggled === id ? (
+                  <div>
+                    <h2 className="text-[16px] uppercase heading-one text-white/50">
+                      {position}
+                    </h2>
+                    <h5 className="text-2xl text-white mt-2 heading-one uppercase">
+                      {name}
+                    </h5>
+                    <p className="mt-4 heading-two text-[#D0D6F9]">{note}</p>
+                  </div>
+                ) : null}
+              </article>
             );
           })}
         </div>
@@ -53,7 +68,7 @@ const Crew = () => {
           return (
             <article
               key={id}
-              className="mt-[274px] lg:ml-[167px] md:mt-[60px] lg:mt-[0] "
+              className="hidden md:block lg:ml-[167px] md:mt-[60px] lg:mt-[0] "
             >
               {toggled === id ? (
                 <div className="hidden md:block text-center lg:text-left lg:flex lg:justify-start   items-center">

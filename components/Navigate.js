@@ -17,8 +17,8 @@ const Navigate = () => {
     <section className=" text-white">
       <div className="hidden md:flex pl-[55px] pt-[40px]  justify-between items-center">
         <Image src={logo} alt="logo" width={48} height={48} placeholder="" />
-        <div className="hidden lg:block h-[1px] w-[473px] z-10 opacity-[25%] bg-white ml-[64px] grow absolute right-[800px]"></div>
-        <div className=" w-[450px] lg:w-[830px] h-[96px] nav-bg flex items-center relative">
+        <div className="hidden lg:block h-[1px] w-[473px] z-10 opacity-[25%] bg-white ml-[64px] grow"></div>
+        <div className=" w-[450px] lg:w-[830px] h-[96px] nav-bg flex items-center">
           <ul className="w-[356px] h-[18px] lg:w-[542px] lg:h-[19px] mx-auto lg:ml-[123px] flex justify-between">
             {links.map((link) => {
               const { id, titleNumber, title, url } = link;

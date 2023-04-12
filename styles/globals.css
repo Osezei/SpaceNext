@@ -81,6 +81,12 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
 }
+body {
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #fff;
+}
 
 /* tablet screen */
 @media only screen and (max-width: 1024px) {
@@ -203,7 +209,4 @@ ul {
   height: 500px;
   object-fit: contain;
   margin-right: 24px;
-}
-body {
-  background-color: #19191a;
 }
