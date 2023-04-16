@@ -83,11 +83,10 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
 }
-body {
+main {
   max-width: 1440px;
   margin-right: auto;
   margin-left: auto;
-  background-color: #fff;
 }
 
 /* tablet screen */
